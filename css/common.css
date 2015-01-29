@@ -6,10 +6,17 @@ core-scroll-header-panel {
   height: 100%;
 }
 
-.content, card {
+.main-content, card {
     padding: 30px;
 }
 
+.post-card{
+    margin-bottom: 30px;
+}
 .card-content {
     margin-left: 30px;
+}
+
+.page-title{
+    margin-bottom: 30px;
 }

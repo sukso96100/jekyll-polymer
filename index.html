@@ -19,15 +19,14 @@ layout: default
     <core-toolbar class="tall" id="mainheader">
       <paper-icon-button 
         id="navicon" icon="menu"></paper-icon-button>
-        <h1 class="bottom indent title"
-            style="color: #666; font-size:3em;">AAA</h1>
-        <div class="bottom indent subtitle"
-             style="color: #666; font-size:0.8em;">aaa</div>
+        <span class="bottom indent title" style="font-size:2em;">{{ site.title }}</span>
+<!--        <p class="middle indent title page-title" style="color: #666; font-size:0.7em;">{{ site.short-description }}<br></p>-->
+       
 
     </core-toolbar>
-    <div class="content">
+    <div class="main-content">
          {% for post in site.posts %}
-        <paper-shadow z="1">
+        <paper-shadow class="post-card" z="1">
         <card>
         <p class="card-content"><core-icon icon="today"></core-icon> {{ post.date | date: "%Y.%m.%d" }}</p>
 
