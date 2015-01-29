@@ -1,0 +1,18 @@
+{
+  "name": "jekyll-polymer",
+  "version": "0.0.0",
+  "authors": [
+    "Youngbin Han <sukso96100@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#~0.5.4"
+  }
+}

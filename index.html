@@ -1,0 +1,47 @@
+---
+layout: default
+---
+
+
+<core-drawer-panel id="drawerPanel">
+
+  <core-header-panel drawer>
+    <core-menu>
+        {% for page in site.pages %}
+          {% if page.title %}
+        <paper-item href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</paper-item>
+          {% endif %}
+        {% endfor %}
+    </core-menu>
+   </core-header-panel>
+
+  <core-scroll-header-panel condenses keepcondensedheader main>
+    <core-toolbar class="tall" id="mainheader">
+      <paper-icon-button 
+        id="navicon" icon="menu"></paper-icon-button>
+        <h1 class="bottom indent title"
+            style="color: #666; font-size:3em;">AAA</h1>
+        <div class="bottom indent subtitle"
+             style="color: #666; font-size:0.8em;">aaa</div>
+
+    </core-toolbar>
+    <div class="content">
+         {% for post in site.posts %}
+        <paper-shadow z="1">
+        <card>
+        <p class="card-content"><core-icon icon="today"></core-icon> {{ post.date | date: "%Y.%m.%d" }}</p>
+
+        <h1 class="card-content">{{ post.title }}</h1>
+            <p class="card-content">{{ post.content | strip_html | truncatewords:50 }}</p>
+            <a href="{{ post.url | prepend: site.baseurl }}">
+            <paper-button raised class="card-content"><core-icon icon="add-box"></core-icon> Read More</paper-button></a>
+            <br><br>
+            </card>
+        </paper-shadow>
+      
+    {% endfor %}
+    </div>
+  </core-scroll-header-panel>
+
+</core-drawer-panel>
+<script src="js/common.js"></script>

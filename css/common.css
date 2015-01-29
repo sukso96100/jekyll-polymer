@@ -1,0 +1,15 @@
+html, body {
+  height: 100%;
+  margin: 0;
+}
+core-scroll-header-panel {
+  height: 100%;
+}
+
+.content, card {
+    padding: 30px;
+}
+
+.card-content {
+    margin-left: 30px;
+}
