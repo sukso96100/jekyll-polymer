@@ -22,7 +22,7 @@ core-scroll-header-panel {
 }
 
 #navheader {
-  background-image: url('/img/profile-bg.jpg');
+  background-image: url('../img/profile-bg.jpg');
   background-blend-mode: multiply;
   background-repeat: no-repeat;
   background-color: #999;
