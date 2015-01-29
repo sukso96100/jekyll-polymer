@@ -1,0 +1,56 @@
+---
+layout: default
+title: Tags
+permalink: /tags/
+---
+
+<core-drawer-panel id="drawerPanel">
+
+  <core-header-panel drawer>
+      {% include drawer.html %}
+   </core-header-panel>
+
+  <core-scroll-header-panel condenses keepcondensedheader main>
+    <core-toolbar class="super-tall" id="mainheader">
+      <paper-icon-button 
+        id="navicon" icon="menu"></paper-icon-button>
+        <h1 class="bottom indent title">{{ page.title }}</h1>
+
+    </core-toolbar>
+    <div class="main-content">
+      
+        <paper-shadow class="post-card" z="1">
+            <card>
+                <p class="card-content"><core-icon icon="label"></core-icon> All Tags</p>
+                {% for tag in site.tags %}
+                <a class="card-content" href="#{{ tag | first }}"> 
+                    <paper-button>{{ tag | first }}</paper-button> </a>
+                {% endfor %}
+            </card>
+           
+        </paper-shadow>
+        
+        
+    
+    
+{% for tag in site.tags %}
+<paper-shadow class="post-card" z="1">
+            <card>
+  <p class="card-content" id="{{ tag | first }}"><core-icon icon="label"></core-icon> {{ tag | first }}</p>
+    {% for posts in tag %}
+      {% for post in posts %}
+<a href="{{ post.url }}">
+  <h4 class="card-content">{{ post.title }} <br><small>{{ post.date | date: "%Y/%m/%d" }}</small></h4>
+</a>
+      {% endfor %}
+    {% endfor %}
+ </card>
+        </paper-shadow>
+{% endfor %}
+  </core-scroll-header-panel>
+
+</core-drawer-panel>
+<script src="{{ "/js/common.js" | prepend: site.baseurl }}"></script>
+
+
+

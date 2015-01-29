@@ -34,6 +34,10 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   height: 192px;
 }
 
+:host(.super-tall) {
+  height: 224px;
+}
+
 .toolbar-tools {
   position: relative;
   height: 64px;
@@ -59,6 +63,12 @@ polyfill-next-selector { content: ':host.core-narrow.tall, .core-narrow :host.ta
   height: 168px;
 }
 
+polyfill-next-selector { content: ':host.core-narrow.super-tall, .core-narrow :host.super-tall'; }
+:host(.core-narrow.super-tall),
+:host-context(.core-narrow):host(.super-tall) {
+  height: 200px;
+}
+
 polyfill-next-selector { content: ':host.core-narrow .toolbar-tools, .core-narrow :host .toolbar-tools'; }
 :host(.core-narrow) .toolbar-tools,
 :host-context(.core-narrow) .toolbar-tools {
@@ -74,7 +84,7 @@ polyfill-next-selector { content: ':host.core-narrow .toolbar-tools, .core-narro
   left: 0;
 }
 
-:host(.tall, .medium-tall) #middleBar {
+:host(.tall, .medium-tall, .super-tall) #middleBar {
   -webkit-transform: translateY(100%);
   transform: translateY(100%);
 }

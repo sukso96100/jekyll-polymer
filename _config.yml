@@ -1,5 +1,5 @@
 # Site settings
-title: Your awesome title
+title: Jekyll-Polymer
 email: your-email@domain.com
 short-description: Hello World
 description: > # this means to ignore newlines until "baseurl:"

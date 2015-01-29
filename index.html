@@ -1,27 +1,20 @@
 ---
 layout: default
+title: Home
 ---
 
 
 <core-drawer-panel id="drawerPanel">
 
   <core-header-panel drawer>
-    <core-menu>
-        {% for page in site.pages %}
-          {% if page.title %}
-        <paper-item href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</paper-item>
-          {% endif %}
-        {% endfor %}
-    </core-menu>
+      {% include drawer.html %}
    </core-header-panel>
 
   <core-scroll-header-panel condenses keepcondensedheader main>
-    <core-toolbar class="tall" id="mainheader">
+    <core-toolbar class="super-tall" id="mainheader">
       <paper-icon-button 
         id="navicon" icon="menu"></paper-icon-button>
-        <span class="bottom indent title" style="font-size:2em;">{{ site.title }}</span>
-<!--        <p class="middle indent title page-title" style="color: #666; font-size:0.7em;">{{ site.short-description }}<br></p>-->
-       
+        <h1 class="bottom indent title">{{ page.title }}</h1>
 
     </core-toolbar>
     <div class="main-content">
@@ -43,4 +36,4 @@ layout: default
   </core-scroll-header-panel>
 
 </core-drawer-panel>
-<script src="js/common.js"></script>
+<script src="{{ "/js/common.js" | prepend: site.baseurl }}"></script>
