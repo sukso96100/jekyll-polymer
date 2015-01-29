@@ -1,0 +1,14 @@
+   <div id="navheader">
+            <br>
+            <img class="profile" src="/img/profile.png">
+            <h2>{{ site.title }}</h2>
+            <p>{{ site.short-description }}</p>
+      </div>
+    <core-menu>
+        {% for page in site.pages %}
+          {% if page.title %}
+        <a href="{{ page.url | prepend: site.baseurl }}">
+        <paper-item>{{ page.title }}</paper-item></a>
+          {% endif %}
+        {% endfor %}
+    </core-menu>

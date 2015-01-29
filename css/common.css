@@ -1,0 +1,79 @@
+html, body {
+  height: 100%;
+  margin: 0;
+}
+core-scroll-header-panel {
+  height: 100%;
+}
+
+.main-content, card {
+    padding: 30px;
+}
+
+.post-card{
+    margin-bottom: 30px;
+}
+.card-content {
+    margin-left: 30px;
+}
+
+.page-title{
+    margin-bottom: 30px;
+}
+
+#navheader {
+  background-image: url('/img/profile-bg.jpg');
+  background-blend-mode: multiply;
+  background-repeat: no-repeat;
+  background-color: #999;
+  background-size: cover;
+  font-size: inherit;
+  padding: 16px;
+  height: 192px;
+  vertical-align: bottom;
+  color: white;
+}
+
+#navheader::shadow .toolbar-tools {
+  z-index: 1;
+}
+
+#navheader::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  background-blend-mode: multiply;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 0;
+  opacity: 0;
+  will-change: opacity;
+  transition: opacity 600ms ease-in-out;
+}
+
+#navheader.coverimg::after {
+  opacity: 1;
+}
+
+#navheader img.profile {
+  border-radius: 50%;
+  width: 64px;
+  height: 64px;
+  margin-bottom: 20px;
+}
+
+#navheader .bottom :last-child {
+  font-size: small;
+  opacity: 0.8;
+}
+/* drawer is always visible on a wide screen
+   so menu button isn't required */
+core-drawer-panel:not([narrow]) #navicon {
+  display: none;
+}
+
+core-header-panel {
+background-color: white;
+}
