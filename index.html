@@ -26,7 +26,7 @@ title: Home
         <h1 class="card-content">{{ post.title }}</h1>
             <p class="card-content">{{ post.content | strip_html | truncatewords:50 }}</p>
             <a href="{{ post.url | prepend: site.baseurl }}">
-            <paper-button raised class="card-content"><core-icon icon="add-box"></core-icon> Read More</paper-button></a>
+            <paper-button class="card-content"><core-icon icon="add-box"></core-icon> Read More</paper-button></a>
             <br><br>
             </card>
         </paper-shadow>
