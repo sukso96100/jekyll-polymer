@@ -18,26 +18,6 @@
         });
 
 
-(function () {
-    var titleStyle;
-    var scale;
-    Polymer({
-      ready:function() {
-        titleStyle = this.$.title.style;
-      },
-      onHeaderTransform: function (event, detail, sender) {
-        var m = detail.height - detail.condensedHeight;
-        var newScale = Math.max(0.5, (m - detail.y) / (m / 0.5)  + 0.5);
-        if(scale != newScale) {
-          scale = newScale;
-          titleStyle.transform =
-            titleStyle.webkitTransform =
-            titleStyle.mozTransform =
-            titleStyle.msTransform = 'scale(' + scale + ')';
-        }
-      }
-    });
-  })();
 
 
 document.addEventListener('polymer-ready', function() {
